@@ -17,7 +17,8 @@ const sidebars = [
   {
     title: '组件',
     children: [
-      { title: 'HelloWorld', link: '/components/hello-world' }
+      { title: 'Button 按钮', link: '/components/button' },
+      { title: 'Input 输入框', link: '/components/input' },
     ]
   }
 ]

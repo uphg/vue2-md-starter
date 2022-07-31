@@ -10,7 +10,4 @@
 import Navbar from './components/Navbar.vue';
 import Sidebar from './components/Sidebar.vue';
 import Content from './components/Content.vue';
-import router from 'docs/router';
-import { computed } from 'vue';
-const route = computed(() => router.currentRoute)
 </script>

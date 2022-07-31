@@ -26,7 +26,7 @@ const routes: RouteConfig[] = [
       {
         path: 'install',
         name: 'DocsInstall',
-        component: () => import('docs/pages/docs/install.vue')
+        component: () => import('docs/pages/docs/install.md')
       }
     ]
   },
@@ -37,9 +37,14 @@ const routes: RouteConfig[] = [
     redirect: '/components/hello-world',
     children: [
       {
-        path: 'hello-world',
-        name: 'ComponentsHelloWorld',
-        component: () => import('docs/pages/components/hello-world.vue')
+        path: 'button',
+        name: 'ComponentsButton',
+        component: () => import('docs/pages/components/button.md')
+      },
+      {
+        path: 'input',
+        name: 'ComponentsInput',
+        component: () => import('docs/pages/components/input.md')
       }
     ]
   },

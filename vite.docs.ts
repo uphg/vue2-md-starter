@@ -1,6 +1,8 @@
 import { defineConfig } from 'vite'
 import path from 'path';
 import vue from '@vitejs/plugin-vue2'
+import Markdown from 'vite-plugin-md'
+import markdownItSetup from './plugins/markdownItSetup'
 
 const toPath = (p) => `${path.resolve(__dirname, p)}/`
 
@@ -16,9 +18,16 @@ export default defineConfig({
         find: 'docs/',
         replacement: toPath('./docs'),
       },
-    ],
+      {
+        find: 'demo/',
+        replacement: toPath('./demo'),
+      }
+    ]
   },
-  plugins: [vue({
-    include: [/\.vue$/, /\.md$/], // <--
-  })]
+  plugins: [
+    vue({
+      include: [/\.vue$/, /\.md$/], // <--
+    }),
+    Markdown({ markdownItSetup }),
+  ]
 })
